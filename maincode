@@ -1,0 +1,23 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string input1 = "the weather is so sunny nowadays";
+        string input2 = "Life is beautiful";
+
+        string reversed1 = ReverseString(input1);
+        string reversed2 = ReverseString(input2);
+
+        Console.WriteLine("Reversed string 1: " + reversed1);
+        Console.WriteLine("Reversed string 2: " + reversed2);
+    }
+
+    static string ReverseString(string input)
+    {
+        string[] words = input.Split(' ');
+        Array.Reverse(words);
+        return string.Join(" ", words);
+    }
+}
